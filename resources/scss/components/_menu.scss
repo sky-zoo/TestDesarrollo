@@ -1,0 +1,140 @@
+$colores: #191919;
+$letras: 20px;
+$zIndexMenu: 1000;
+
+.menu{
+    border-bottom: 1px #d8d8d8 solid;
+    position: relative;
+    z-index: $zIndexMenu;
+    display: grid;
+    height: 70px;
+    width: 100%;
+    grid-template-columns: 120px auto 150px;
+    .logo-empresa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .opciones{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        // border: 1px red solid;
+        .opciones-modelos, .opciones-ficha{
+            height: 100%;
+            padding: 13px 25px;
+            display: flex;
+            align-items: center;
+            a{
+                font-size: $letras;
+            }
+        }
+
+        .activo{
+            border-bottom: 5px #d0021b solid;
+            a{
+                color: #eb0a1e;
+            }
+        }
+        .no-activo{
+            a{
+                color: $colores;
+            }
+        }
+
+    }
+
+    .boton-menu-desplegable{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            color: $colores;
+            margin-right: 6px;
+        }
+
+        .boton-menu{
+            border: none;
+            background: none;
+        }
+
+        img{
+            cursor: pointer;
+        }
+    }
+    
+}
+
+.menu-desplegable{
+    border: 1px #efeeef solid;
+    border-top: none;
+    position: absolute;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0px;
+    width: 390px;
+
+    .oscuro{
+        background-color: #efeeef;
+        flex-grow: 3;
+    }
+
+    .claro{
+        background-color: #fff;
+    }
+
+    .claro, .oscuro{
+        padding: 0 10px;
+        .menu-opciones{
+            list-style: none;
+            border-bottom: 1px #efeeef solid;
+            padding: 15px 20px;
+    
+            .opciones{
+                // border: 1px red solid;
+                text-align: right;
+                padding: 10px 10px;
+                
+                a{
+                    font-size: 23px;
+                    color: #000000;
+                }
+    
+            }
+    
+        }
+    }
+
+}
+
+
+.fondo-menu{
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    z-index: 900;
+    right: -100%;
+    // right: 0;
+    display: grid;
+    grid-template-columns: auto 390px;
+    // grid-template-rows: auto;
+    // visibility: hidden;
+    transition: all .5s;
+}
+.mostrar{
+    transition: all .5s;
+    visibility: visible;
+    right: 0;
+}
+.fondo{
+    background-color: rgba(0,0,0,.2);
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    // z-index: 600;
+}

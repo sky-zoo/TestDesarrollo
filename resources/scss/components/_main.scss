@@ -1,0 +1,105 @@
+$color: #373737;
+
+.main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 222px auto auto;
+    margin: 0 120px;
+    .titulo{
+        display: flex;
+        align-items: center;
+        h1{
+            font-size: 50px;
+            color: $color;
+        }
+    }
+
+    .catalogo{
+        // border: 1px red solid;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+
+        .filtrar-ordenar{
+            border-bottom: 1px #d8d8d8 solid;
+            display: grid;
+            grid-template-columns: 90px auto 125px;
+            grid-template-rows: auto;
+            padding: 5px;
+
+            .filtrar{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $color;
+                font-weight: bold;
+            }
+
+            .categorias{
+                display: flex;
+                list-style: none;
+                li{
+                    padding: 10px 20px;
+                    margin: 0 5px;
+                    a{
+                        color: $color;
+                        font-size: 16px;
+                    }
+                }
+                .activo{
+                    background-color: #f7f7f7;
+                    border-radius: 20px;
+                }
+            }
+
+            .ordenar{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                button{
+                    background: none;
+                    border: none;
+                    color: $color;
+                    font-size: 17px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .autos{
+            // border: 1px red solid;
+            display: grid;
+            // padding: 30px 10px;
+            margin-top: 75px;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 20px 50px;
+
+            a{
+                text-decoration: none;
+                color: #000000;
+            }
+
+            .auto{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // border: 1px red solid;
+                .descripcion{
+                    
+                    h3{
+                        text-align: center;
+                        font-size: 28px;
+                    }
+
+                    p{
+                        color: #191919;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+}

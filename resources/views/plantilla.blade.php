@@ -3,122 +3,259 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../resources/css/estilos.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
     <title>Pagina</title>
   </head>
   <body>
 
-    <nav class="navbar navbar-light border-bottom position-relative">
-        <a href="#" class="navbar-brand">
-          <img src="{{ asset('img/logo.svg') }}" alt="logo">
+    <nav class="menu" id="menu">
+      <div class="logo-empresa">
+        <a href="#" class="logo">
+          <img src="{{ asset('img/logo.svg') }}">
         </a>
-
-        <ul class="navbar-nav d-none d-sm-flex flex-row">
-          <li class="nav-item mr-5 active">
-            <a href="{{ route('modelos') }}" class="nav-link">Modelos</a>
-          </li>
-          <li class="nav-item">
-            <a href=" {{ route('fichaModelo') }} " class="nav-link">Ficha de modelo</a>
-          </li>
-        </ul>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir navegacion">
-          <span class="navbar-toggler-icon"></span>
+      </div>
+      <ul class="opciones">
+        <li class="opciones-modelos activo">
+          <a href="#">Modelos</a>
+        </li>
+        <li class="opciones-ficha no-activo">
+          <a href="#">Ficha de modelo</a>
+        </li>
+      </ul>
+      <div class="boton-menu-desplegable">
+        <p>Menú</p>
+        <button class="boton-menu" id="botonMenu">
+          <img src="{{ asset('img/menu.svg') }}">
         </button>
+      </div>
     </nav>
 
-    <div class="navbar-collapse collapse row position-absolute w-100 mx-0" id="menu">
-      <div class="col-xl-9 bg-success">
-      
+    <div class="fondo-menu" id="fondoMenu">
+      <div class="fondo">
+        
       </div>
+      <nav class="menu-desplegable" id="menuDesplegable">
+        <div class="claro" id="claro">
+          <ul class="menu-opciones">
+            <li class="opciones">
+              <a href="#">Modelos</a>
+            </li>
 
-      <nav class="navbar navbar-light col-xl-3 mx-0 bg-light">
-        <ul class="navbar-nav text-right w-100 border-bottom">
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Modelos</a>
-          </li>
+            <li class="opciones">
+              <a href="#">Servicios y Accesorios</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Servicios y Accesorios</a>
-          </li>
+            <li class="opciones">
+              <a href="#">Financiación</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Financiación</a>
-          </li>
+            <li class="opciones">
+              <a href="#">Reviews y Comunidad</a>
+            </li>
+          </ul>
+          <ul class="menu-opciones">
+            <li class="opciones">
+              <a href="#">Toyota Mobility Service</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Reviews y Comunidad</a>
-          </li>
-        </ul>
+            <li class="opciones">
+              <a href="#">Toyota Gazoo Racing</a>
+            </li>
 
-        <ul class="navbar-nav text-right w-100 bg-light my-2 border-bottom">
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Toyota Mobility Service</a>
-          </li>
+            <li class="opciones">
+              <a href="#">Toyota Híbridos</a>
+            </li>
+          </ul>
+          <ul class="menu-opciones">
+            <li class="opciones">
+              <a href="#">Concesionarios</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Toyota Gazoo Racing</a>
-          </li>
+            <li class="opciones">
+              <a href="#">Test Drive</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Toyota Híbridos</a>
-          </li>
-        </ul>
+            <li class="opciones">
+              <a href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="oscuro" id="oscuro">
+          <ul class="menu-opciones">
+            <li class="opciones">
+              <a href="#">Actividades</a>
+            </li>
 
-        <ul class="navbar-nav text-right w-100 bg-light mb-2 border-bottom">
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Concesionarios</a>
-          </li>
+            <li class="opciones">
+              <a href="#">Servicios al Cliente</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Test Drive</a>
-          </li>
+            <li class="opciones">
+              <a href="#">Ventas Especiales</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Contacto</a>
-          </li>
-        </ul>
+            <li class="opciones">
+              <a href="#">Innovación</a>
+            </li>
 
-        <ul class="navbar-nav text-right w-100">
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Actividades</a>
-          </li>
+            <li class="opciones">
+              <a href="#">Prensa</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Servicios al Cliente</a>
-          </li>
+            <li class="opciones">
+              <a href="#">Acerca de...</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Ventas Especiales</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Innovación</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Prensa</a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link p-1" style="font-size:25px;">Acerca de...</a>
-          </li>
-        </ul>
+          </ul>
+        </div>
       </nav>
     </div>
-
-    <div class="container border border-primary bg-success h-50">
-        <!-- @yield('seccion') -->
-        <h1 class="display-4 font-weight-bolder">Descubrí todos los modelos</h1>
-    </div>
-    <div class="container-fluid bg bg-dark"></div>
     
+    <main class="main">
+      <div class="titulo">
+        <h1>Descrubrí todos los modelos</h1>
+      </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="../resources/js/main.js"></script>
+      <div class="catalogo">
+        <div class="filtrar-ordenar">
+          <div class="filtrar">
+            <p>Filtrar por</p>
+          </div>
+          <ul class="categorias">
+            <li class="activo">
+              <a href="#">Todos</a>
+            </li>
+
+            <li>
+              <a href="#">Autos</a>
+            </li>
+
+            <li>
+              <a href="#">Pickups y Comerciales</a>
+            </li>
+
+            <li>
+              <a href="#">SUVs y Crossovers</a>
+            </li>
+          </ul>
+          <div class="ordenar">
+            <button>
+              Ordenar por <img src="{{ asset('img/flecha.svg') }}" alt="">
+            </button>
+            
+          </div>
+        </div>
+        
+        <div class="autos">
+          <a href="#">
+            <div class="auto">
+              <div class="descripcion">
+                <h3>Etios</h3>
+                <p>2019 | $ 815.900</p>
+              </div>
+              <img src="{{ asset('img/coches/etios.png') }}" alt="">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="auto">
+              <div class="descripcion">
+                <h3>Yaris</h3>
+                <p>2020 | $ 1.038.900</p>
+              </div>
+              <img src="{{ asset('img/coches/yaris.png') }}" alt="">
+            </div>
+          </a>
+
+          <div class="auto">
+            <div class="descripcion">
+              <h3>Corolla</h3>
+              <p>2018 | $ 1.430.700</p>
+            </div>
+            <img src="{{ asset('img/coches/corolla.png') }}" alt="">
+          </div>
+  
+          <div class="auto">
+            <div class="descripcion">
+              <h3>Prius</h3>
+              <p>2019 | $ 2.882.000</p>
+            </div>
+            <img src="{{ asset('img/coches/prius-1.png') }}" alt="">
+          </div>
+
+          <div class="auto">
+            <div class="descripcion">
+              <h3>Camry</h3>
+              <p>2018 | $ 3.753.200</p>
+            </div>
+            <img src="{{ asset('img/coches/camry.png') }}" alt="">
+          </div>
+
+          <div class="auto">
+            <div class="descripcion">
+              <h3>Toyota 86</h3>
+              <p>2019 | $ 3.812.100</p>
+            </div>
+            <img src="{{ asset('img/coches/toyota-86.png') }}" alt="">
+          </div>
+
+          <div class="auto">
+            <div class="descripcion">
+              <h3>Innova</h3>
+              <p>2020 | $ 2.596.400</p>
+            </div>
+            <img src="{{ asset('img/coches/innova.png') }}" alt="">
+          </div>
+
+          <div class="auto">
+            <div class="descripcion">
+              <h3>SW4</h3>
+              <p>2019 | $ 3.236.200</p>
+            </div>
+            <img src="{{ asset('img/coches/sw-4.png') }}" alt="">
+          </div>
+
+          <div class="auto">
+            <div class="descripcion">
+              <h3>RAV4</h3>
+              <p>2019 | $ 3.170.200</p>
+            </div>
+            <img src="{{ asset('img/coches/rav-4.png') }}" alt="">
+          </div>
+
+          <div class="auto">
+            <div class="descripcion">
+              <h3>Land Cruiser Prado</h3>
+              <p>2017 | $ 815.900</p>
+            </div>
+            <img src="{{ asset('img/coches/prado.png') }}" alt="">
+          </div>
+
+          <div class="auto">
+            <div class="descripcion">
+              <h3>Land Cruiser 200</h3>
+              <p>2018 | $ 7.873.100</p>
+            </div>
+            <img src="{{ asset('img/coches/cruiser.png') }}" alt="">
+          </div>
+
+          <div class="auto">
+            <div class="descripcion">
+              <h3>Hilux</h3>
+              <p>2020 | $ 1.507.000</p>
+            </div>
+            <img src="{{ asset('img/coches/hilux.png') }}" alt="">
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <!-- Acá va el fondo -->
+    </footer>
+    
   </body>
+  <script src=" {{ asset('js/main.js') }} "></script>
 </html>

@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.menu {
+  border-bottom: 1px #d8d8d8 solid;
+  position: relative;
+  z-index: 1000;
+  display: grid;
+  height: 70px;
+  width: 100%;
+  grid-template-columns: 120px auto 150px;
+}
+.menu .logo-empresa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .opciones {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.menu .opciones .opciones-modelos, .menu .opciones .opciones-ficha {
+  height: 100%;
+  padding: 13px 25px;
+  display: flex;
+  align-items: center;
+}
+.menu .opciones .opciones-modelos a, .menu .opciones .opciones-ficha a {
+  font-size: 20px;
+}
+.menu .opciones .activo {
+  border-bottom: 5px #d0021b solid;
+}
+.menu .opciones .activo a {
+  color: #eb0a1e;
+}
+.menu .opciones .no-activo a {
+  color: #191919;
+}
+.menu .boton-menu-desplegable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .boton-menu-desplegable p {
+  color: #191919;
+  margin-right: 6px;
+}
+.menu .boton-menu-desplegable .boton-menu {
+  border: none;
+  background: none;
+}
+.menu .boton-menu-desplegable img {
+  cursor: pointer;
+}
+
+.menu-desplegable {
+  border: 1px #efeeef solid;
+  border-top: none;
+  position: absolute;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0px;
+  width: 390px;
+}
+.menu-desplegable .oscuro {
+  background-color: #efeeef;
+  flex-grow: 3;
+}
+.menu-desplegable .claro {
+  background-color: #fff;
+}
+.menu-desplegable .claro, .menu-desplegable .oscuro {
+  padding: 0 10px;
+}
+.menu-desplegable .claro .menu-opciones, .menu-desplegable .oscuro .menu-opciones {
+  list-style: none;
+  border-bottom: 1px #efeeef solid;
+  padding: 15px 20px;
+}
+.menu-desplegable .claro .menu-opciones .opciones, .menu-desplegable .oscuro .menu-opciones .opciones {
+  text-align: right;
+  padding: 10px 10px;
+}
+.menu-desplegable .claro .menu-opciones .opciones a, .menu-desplegable .oscuro .menu-opciones .opciones a {
+  font-size: 23px;
+  color: #000000;
+}
+
+.fondo-menu {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  z-index: 900;
+  right: -100%;
+  display: grid;
+  grid-template-columns: auto 390px;
+  transition: all 0.5s;
+}
+
+.mostrar {
+  transition: all 0.5s;
+  visibility: visible;
+  right: 0;
+}
+
+.fondo {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+}
+
+body {
+  overflow: hidden;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 222px auto auto;
+  margin: 0 120px;
+}
+.main .titulo {
+  display: flex;
+  align-items: center;
+}
+.main .titulo h1 {
+  font-size: 50px;
+  color: #373737;
+}
+.main .catalogo {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+}
+.main .catalogo .filtrar-ordenar {
+  border-bottom: 1px #d8d8d8 solid;
+  display: grid;
+  grid-template-columns: 90px auto 125px;
+  grid-template-rows: auto;
+  padding: 5px;
+}
+.main .catalogo .filtrar-ordenar .filtrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #373737;
+  font-weight: bold;
+}
+.main .catalogo .filtrar-ordenar .categorias {
+  display: flex;
+  list-style: none;
+}
+.main .catalogo .filtrar-ordenar .categorias li {
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+.main .catalogo .filtrar-ordenar .categorias li a {
+  color: #373737;
+  font-size: 16px;
+}
+.main .catalogo .filtrar-ordenar .categorias .activo {
+  background-color: #f7f7f7;
+  border-radius: 20px;
+}
+.main .catalogo .filtrar-ordenar .ordenar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .catalogo .filtrar-ordenar .ordenar button {
+  background: none;
+  border: none;
+  color: #373737;
+  font-size: 17px;
+  font-weight: bold;
+}
+.main .catalogo .autos {
+  display: grid;
+  margin-top: 75px;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px 50px;
+}
+.main .catalogo .autos a {
+  text-decoration: none;
+  color: #000000;
+}
+.main .catalogo .autos .auto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .catalogo .autos .auto .descripcion h3 {
+  text-align: center;
+  font-size: 28px;
+}
+.main .catalogo .autos .auto .descripcion p {
+  color: #191919;
+}
