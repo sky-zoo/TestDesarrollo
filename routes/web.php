@@ -20,18 +20,3 @@ Route::get('/', function () {
 Route::get('/ficha_modelo', function(){
     return view('fichaModelo');
 })->name('fichaModelo');
-
-
-
-Route::get('fotos/{numero?}', function($numero = 1){
-    $numeros = array();
-    for($i = 0; $i <= 10; $i++){
-        array_push($numeros, $i);
-    }
-
-    return view('fotos',['numero'=>$numeros]);
-})->where('numero', '[0-9]+')->name('foto');
-
-Route::get('blog', function(){
-    return view('blog');
-})->name('noticias');

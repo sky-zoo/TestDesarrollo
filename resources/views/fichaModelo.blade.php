@@ -1,5 +1,5 @@
-@extends('modelos')
+@extends('plantilla')
 
-@section('seccion')
-<h1>Ficha de modelo</h1>
+@section('contenido')
+<h1>Yupasdai</h1>
 @endsection
