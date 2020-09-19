@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/modelos', function () {
+Route::get('/', function () {
     return view('modelos');
-})->name('modelos');
+})->name('home');
 
 Route::get('/ficha_modelo', function(){
     return view('fichaModelo');

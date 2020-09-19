@@ -9,6 +9,7 @@
 body{
     display: flex;
     flex-direction: column;
+    // border: 1px red solid;
     width: 100vw;
     height: 100vh;
 }
@@ -16,3 +17,4 @@ body{
 @import "components/menu";
 @import "components/body";
 @import "components/main";
+@import "components/mediaQueriesHome";

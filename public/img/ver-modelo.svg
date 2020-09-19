@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="34" viewBox="0 0 152 34">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#191919" d="M17 0h118c9.389 0 17 7.611 17 17s-7.611 17-17 17H17C7.611 34 0 26.389 0 17S7.611 0 17 0z"/>
+        <text fill="#FFF" font-family="ToyotaType-Semibold, Toyota Type" font-size="13" font-weight="500" letter-spacing=".073">
+            <tspan x="40.021" y="19">Ver Modelo</tspan>
+        </text>
+    </g>
+</svg>

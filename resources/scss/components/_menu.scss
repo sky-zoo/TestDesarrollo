@@ -4,12 +4,13 @@ $zIndexMenu: 1000;
 
 .menu{
     border-bottom: 1px #d8d8d8 solid;
-    position: relative;
+    background-color: #fff;
+    position: fixed;
     z-index: $zIndexMenu;
     display: grid;
-    height: 70px;
     width: 100%;
-    grid-template-columns: 120px auto 150px;
+    grid-template-columns: 120px auto 120px;
+    grid-template-rows: 70px;
     .logo-empresa{
         display: flex;
         justify-content: center;
@@ -69,19 +70,21 @@ $zIndexMenu: 1000;
 }
 
 .menu-desplegable{
-    border: 1px #efeeef solid;
-    border-top: none;
+    border-left: 1px #efeeef solid;
+    // border-top: none;
+    // border-right: none;
+    // border-bottom: none;
     position: absolute;
-    z-index: 900;
     display: flex;
     flex-direction: column;
     top: 0;
     right: 0px;
     width: 390px;
+    height: 100%;
 
     .oscuro{
         background-color: #efeeef;
-        flex-grow: 3;
+        flex-grow: 1;
     }
 
     .claro{
@@ -94,11 +97,12 @@ $zIndexMenu: 1000;
             list-style: none;
             border-bottom: 1px #efeeef solid;
             padding: 15px 20px;
+            // border: 1px red solid;
     
             .opciones{
                 // border: 1px red solid;
                 text-align: right;
-                padding: 10px 10px;
+                padding: 10px;
                 
                 a{
                     font-size: 23px;
@@ -108,33 +112,30 @@ $zIndexMenu: 1000;
             }
     
         }
+
+        .menu-opciones:last-child{
+            border: none;
+        }
     }
 
 }
 
 
 .fondo-menu{
-    position: absolute;
     width: 100vw;
-    top: 0;
-    z-index: 900;
+    height: 100vh;
+    position: fixed;
+    z-index: 990;
+    top: 70px;
+    // bottom: 0;
     right: -100%;
-    // right: 0;
-    display: grid;
-    grid-template-columns: auto 390px;
-    // grid-template-rows: auto;
-    // visibility: hidden;
+    background-color: rgba(0,0,0,.2);
     transition: all .5s;
+    visibility: hidden;
+    // border: 1px red solid;
 }
 .mostrar{
     transition: all .5s;
     visibility: visible;
     right: 0;
-}
-.fondo{
-    background-color: rgba(0,0,0,.2);
-    height: 100vh;
-    position: absolute;
-    width: 100vw;
-    // z-index: 600;
 }
