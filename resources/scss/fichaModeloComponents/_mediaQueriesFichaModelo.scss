@@ -1,0 +1,334 @@
+@media screen and (max-width: 1400px){
+    .caja-presentacion{
+        // border: 1px red solid;
+        top: 60px;
+// BAJAR EL FONT SIZE UN POCO PARA QUE SEA VEA MAS CHICO
+        .presentacion{
+            margin: 0 100px;
+            .detalles{
+
+                .descripcion-auto{
+                    width: 100%;
+                }
+
+            }
+
+        }
+
+        .caracteristicas-auto{
+
+            .lista-caracteristicas{
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                justify-content: space-around;
+                grid-gap: 20px;
+                // border: 1px red solid;
+
+                .item{
+                    // border: 1px red solid;
+                }
+
+                .pasar-izquierda, .pasar-derecha{
+                    display: none;
+                }
+
+                .item:first-child, .item:last-child{
+                    display: none;
+                }
+            }
+
+        }
+
+        .especialidades-auto{
+            // border: 1px red solid;
+
+            .texto{
+
+                div{
+
+                    margin: 0 100px;
+
+                }
+
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 1180px){
+    .caja-presentacion{
+
+        .presentacion{
+            margin: 0 80px;
+        }
+
+        .especialidades-auto{
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto auto;
+            
+            .texto{
+                div{
+                    margin: 0 150px;
+                }
+            }
+
+            .texto:nth-of-type(1){
+                // border: 1px blue solid;
+                grid-row: 2;
+            }
+
+        }
+
+    }
+}
+@media screen and (max-width: 1080px){
+
+    .caja-presentacion{
+
+        .presentacion{
+            // margin: 0 60px;
+            margin: 0;
+            padding: 10px;
+            flex-direction: column;
+
+            .detalles{
+
+                width: 100%;
+
+                .descripcion-auto{
+
+                    .titulo{
+                        font-size: 40px;
+                    }
+
+                    .descripcion{
+                        font-size: 19px;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .especialidades-auto{
+
+            .texto{
+                div{
+                    margin: 0 100px;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .caja-presentacion{
+
+        .presentacion{
+            // .imagen{
+            //     img{
+            //         object-fit: cover;
+            //         object-position: center center;
+            //     }
+            // }
+            .detalles{
+
+                .descripcion-auto{
+                    .titulo{
+
+                        font-size: 35px;
+
+                    }
+
+                    .descripcion{
+                        font-size: 18px;
+                    }
+                }
+
+            }
+
+        }
+
+        .caracteristicas-auto{
+
+            .lista-caracteristicas{
+                .item{
+
+                    .item-caja{
+                        b{
+                            font-size: 21px;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        .especialidades-auto{
+
+            .texto{
+                div{
+                    margin: 0 10px;
+                }
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .caja-presentacion{
+
+        .presentacion{
+            // border: 1px red solid;
+            // margin: 0;
+            padding: 0;
+            // display: grid;
+            // display: flex;
+            // grid-template-columns: auto;
+            // grid-template-rows: auto auto;
+            // justify-content: flex-end;
+            .detalles{
+                padding: 0 15px;
+                // border: 1px red solid;
+                align-self: center;
+            }
+
+            .imagen{
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+
+        .caracteristicas-auto{
+            // border: 1px red solid;
+            overflow: hidden;
+            .lista-caracteristicas{
+                // border: 1px red solid;
+                // width: 100%;
+                // display: flex;
+                grid-template-columns: auto auto auto auto;
+                grid-template-rows: auto;
+                // align-content: center;
+                grid-gap: 0px;
+                width: 200%;
+                // margin-left: 580px;
+                animation: animacion-lista 20s infinite alternate;
+                // animation-delay: 4s;
+                .item{
+                    // border: 1px red solid;
+
+                    margin: auto;
+                    
+                }
+
+                .item:first-child{
+                    align-self: center;
+                    img{
+                        position: relative;
+                        // top: 0px;
+                    }
+                }
+
+            }
+
+        }
+
+        .especialidades-auto{
+
+            .imagen{
+                padding: 0 20px;
+                img{
+                    width: 100%;
+                    // object-fit: contain;
+                    // object-position: center;
+                }
+            }
+
+        }
+
+    }
+
+    @keyframes animacion-lista {
+        // Primera y segunda imagen
+        0%{
+            margin-left: 0;
+        }
+        50%{
+            margin-left: 0;
+        }
+
+        // Tercera y cuarta imagen
+
+        80%{
+            margin-left: -100%;
+        }
+        100%{
+            margin-left: -100%;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 580px){
+
+    .caja-presentacion{
+
+
+
+        .caracteristicas-auto{
+            justify-content: space-around;
+            .lista-caracteristicas{
+                animation: animacion-lista 20s infinite alternate;
+                width: 400%;
+                .item{
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    @keyframes animacion-lista {
+        // Primera imagen
+        0%{
+            margin-left: 0;
+        }
+        20%{
+            margin-left: 0;
+        }
+        // Segunda imagen
+        25%{
+            margin-left: -100%;
+        }
+        45%{
+            margin-left: -100%;
+        }
+        // Tercera imagen
+        50%{
+            margin-left: -200%;
+        }
+        70%{
+            margin-left: -200%;
+        }
+        // Cuarta imagen
+
+        75%{
+            margin-left: -300%;
+        }
+        100%{
+            margin-left: -300%;
+        }
+    }
+}

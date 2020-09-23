@@ -3,7 +3,7 @@ $color: #373737;
 .main{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 222px auto auto;
+    // grid-template-rows: 222px auto auto; //ORIGINALMENTE ESTABA ESTO
     position: relative;
     top: 70px;
     margin: 0 120px;
@@ -13,6 +13,7 @@ $color: #373737;
         display: flex;
         align-items: center;
         h1{
+            padding: 70px 0; // SAQUE EL GRID TEMPLATE ROWS POR ESTO 
             font-size: 50px;
             color: $color;
         }
@@ -128,7 +129,8 @@ $color: #373737;
             display: grid;
             grid-template-columns: auto auto auto auto;
             grid-template-rows: auto;
-            justify-content: space-evenly;
+            grid-gap: 60px 0;
+            // justify-content: space-evenly;
             // position: relative;
             margin-bottom: 75px;
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('modelos');
-})->name('home');
+Route::get('/', [PageController::class, 'inicio'])->name('home');
 
-Route::get('/ficha_modelo', function(){
-    return view('fichaModelo');
-})->name('fichaModelo');
+Route::get('ficha_modelo/{idAuto?}', [PageController::class, 'fichaModelo'])->name('fichaModelo')->where('idAuto', '[0-9]+');

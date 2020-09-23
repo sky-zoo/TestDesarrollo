@@ -131,7 +131,6 @@ body {
 .main {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 222px auto auto;
   position: relative;
   top: 70px;
   margin: 0 120px;
@@ -141,6 +140,7 @@ body {
   align-items: center;
 }
 .main .titulo h1 {
+  padding: 70px 0;
   font-size: 50px;
   color: #373737;
 }
@@ -233,7 +233,7 @@ body {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto;
-  justify-content: space-evenly;
+  grid-gap: 60px 0;
   margin-bottom: 75px;
 }
 .main .catalogo .autos .auto {
@@ -280,7 +280,7 @@ footer {
   width: 100vw;
 }
 
-@media screen and (max-width: 1325px) {
+@media screen and (max-width: 1400px) {
   .menu {
     grid-template-columns: 90px auto 90px;
     grid-template-rows: 60px;
@@ -383,7 +383,7 @@ footer {
     border-radius: 0;
   }
 }
-@media (max-width: 580px) {
+@media screen and (max-width: 580px) {
   .main .catalogo .autos {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;

@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/estilosFichaModelo.css') }}"> -->
+    @yield('hojas-estilo')
     <title>Pagina</title>
   </head>
   <body>
@@ -15,12 +17,13 @@
         </a>
       </div>
       <ul class="opciones">
-        <li class="opciones-modelos activo">
+        @yield('seccion-activa')
+        <!-- <li class="opciones-modelos activo">
           <a href="{{ route('home') }}">Modelos</a>
         </li>
         <li class="opciones-ficha no-activo">
-          <a href="{{ route('fichaModelo') }}">Ficha de modelo</a>
-        </li>
+          <a href="#">Ficha de modelo</a>
+        </li> -->
       </ul>
       <div class="boton-menu-desplegable">
         <p>Menú</p>
@@ -108,9 +111,7 @@
         </div>
       </nav>
     </div>
-    <main class="main" style="border:1px red solid;">
       @yield('contenido')
-    </main>
     <footer>
       
     </footer>

@@ -1,0 +1,308 @@
+.caja-presentacion {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  position: relative;
+  top: 70px;
+  width: 100vw;
+  color: #373737;
+}
+.caja-presentacion .presentacion {
+  position: relative;
+  padding: 50px 0;
+  margin: 0 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caja-presentacion .presentacion .imagen {
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  display: flex;
+}
+.caja-presentacion .presentacion .imagen img {
+  max-width: 100%;
+}
+.caja-presentacion .presentacion .detalles {
+  align-self: stretch;
+  padding: 10px;
+  width: 100%;
+}
+.caja-presentacion .presentacion .detalles .nombre-auto {
+  font-weight: 600;
+}
+.caja-presentacion .presentacion .detalles .descripcion-auto .titulo {
+  font-size: 50px;
+  font-weight: 600;
+}
+.caja-presentacion .presentacion .detalles .descripcion-auto .descripcion {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.69;
+  letter-spacing: -0.1px;
+}
+.caja-presentacion .caracteristicas-auto {
+  background-color: #f7f7f7;
+  padding: 40px 0px;
+  margin-bottom: 60px;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas {
+  list-style: none;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto;
+  justify-content: space-between;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .pasar-izquierda, .caja-presentacion .caracteristicas-auto .lista-caracteristicas .pasar-derecha {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.56);
+  z-index: 980;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 52%;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .pasar-izquierda button, .caja-presentacion .caracteristicas-auto .lista-caracteristicas .pasar-derecha button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .pasar-izquierda button img, .caja-presentacion .caracteristicas-auto .lista-caracteristicas .pasar-derecha button img {
+  width: 100%;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .pasar-derecha {
+  right: 0;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .item:first-child, .caja-presentacion .caracteristicas-auto .lista-caracteristicas .item:last-child {
+  width: 128px;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .item:first-child img, .caja-presentacion .caracteristicas-auto .lista-caracteristicas .item:last-child img {
+  position: relative;
+  top: -8px;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .item .item-caja {
+  max-width: 270px;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .item .item-caja b {
+  display: block;
+  font-size: 23px;
+  letter-spacing: -0.4px;
+  line-height: 1.35;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .item .item-caja p {
+  line-height: 1.69;
+  letter-spacing: -0.1px;
+  text-align: justify;
+  font-size: 18px;
+}
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .item .item-caja img {
+  width: 100%;
+}
+.caja-presentacion .especialidades-auto {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  margin-bottom: 120px;
+  position: relative;
+}
+.caja-presentacion .especialidades-auto .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.caja-presentacion .especialidades-auto .texto div {
+  padding: 15px;
+  margin: 0 190px;
+}
+.caja-presentacion .especialidades-auto .texto div h2 {
+  letter-spacing: -0.4px;
+  line-height: 1.35;
+  font-size: 30px;
+}
+.caja-presentacion .especialidades-auto .texto div p {
+  letter-spacing: -0.1px;
+  line-height: 1.69;
+  font-size: 19px;
+  text-align: justify;
+}
+.caja-presentacion .especialidades-auto .imagen {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}
+.caja-presentacion .especialidades-auto .imagen img {
+  padding: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  .caja-presentacion {
+    top: 60px;
+  }
+  .caja-presentacion .presentacion {
+    margin: 0 100px;
+  }
+  .caja-presentacion .presentacion .detalles .descripcion-auto {
+    width: 100%;
+  }
+  .caja-presentacion .caracteristicas-auto .lista-caracteristicas {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-around;
+    grid-gap: 20px;
+  }
+  .caja-presentacion .caracteristicas-auto .lista-caracteristicas .pasar-izquierda, .caja-presentacion .caracteristicas-auto .lista-caracteristicas .pasar-derecha {
+    display: none;
+  }
+  .caja-presentacion .caracteristicas-auto .lista-caracteristicas .item:first-child, .caja-presentacion .caracteristicas-auto .lista-caracteristicas .item:last-child {
+    display: none;
+  }
+  .caja-presentacion .especialidades-auto .texto div {
+    margin: 0 100px;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .caja-presentacion .presentacion {
+    margin: 0 80px;
+  }
+  .caja-presentacion .especialidades-auto {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+  }
+  .caja-presentacion .especialidades-auto .texto div {
+    margin: 0 150px;
+  }
+  .caja-presentacion .especialidades-auto .texto:nth-of-type(1) {
+    grid-row: 2;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .caja-presentacion .presentacion {
+    margin: 0;
+    padding: 10px;
+    flex-direction: column;
+  }
+  .caja-presentacion .presentacion .detalles {
+    width: 100%;
+  }
+  .caja-presentacion .presentacion .detalles .descripcion-auto .titulo {
+    font-size: 40px;
+  }
+  .caja-presentacion .presentacion .detalles .descripcion-auto .descripcion {
+    font-size: 19px;
+  }
+  .caja-presentacion .especialidades-auto .texto div {
+    margin: 0 100px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .caja-presentacion .presentacion .detalles .descripcion-auto .titulo {
+    font-size: 35px;
+  }
+  .caja-presentacion .presentacion .detalles .descripcion-auto .descripcion {
+    font-size: 18px;
+  }
+  .caja-presentacion .caracteristicas-auto .lista-caracteristicas .item .item-caja b {
+    font-size: 21px;
+  }
+  .caja-presentacion .especialidades-auto .texto div {
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .caja-presentacion .presentacion {
+    padding: 0;
+  }
+  .caja-presentacion .presentacion .detalles {
+    padding: 0 15px;
+    align-self: center;
+  }
+  .caja-presentacion .presentacion .imagen {
+    width: 100%;
+    justify-content: center;
+  }
+  .caja-presentacion .caracteristicas-auto {
+    overflow: hidden;
+  }
+  .caja-presentacion .caracteristicas-auto .lista-caracteristicas {
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    width: 200%;
+    animation: animacion-lista 20s infinite alternate;
+  }
+  .caja-presentacion .caracteristicas-auto .lista-caracteristicas .item {
+    margin: auto;
+  }
+  .caja-presentacion .caracteristicas-auto .lista-caracteristicas .item:first-child {
+    align-self: center;
+  }
+  .caja-presentacion .caracteristicas-auto .lista-caracteristicas .item:first-child img {
+    position: relative;
+  }
+  .caja-presentacion .especialidades-auto .imagen {
+    padding: 0 20px;
+  }
+  .caja-presentacion .especialidades-auto .imagen img {
+    width: 100%;
+  }
+
+  @keyframes animacion-lista {
+    0% {
+      margin-left: 0;
+    }
+    50% {
+      margin-left: 0;
+    }
+    80% {
+      margin-left: -100%;
+    }
+    100% {
+      margin-left: -100%;
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  .caja-presentacion .caracteristicas-auto {
+    justify-content: space-around;
+  }
+  .caja-presentacion .caracteristicas-auto .lista-caracteristicas {
+    animation: animacion-lista 20s infinite alternate;
+    width: 400%;
+  }
+  .caja-presentacion .caracteristicas-auto .lista-caracteristicas .item {
+    width: 100%;
+  }
+
+  @keyframes animacion-lista {
+    0% {
+      margin-left: 0;
+    }
+    20% {
+      margin-left: 0;
+    }
+    25% {
+      margin-left: -100%;
+    }
+    45% {
+      margin-left: -100%;
+    }
+    50% {
+      margin-left: -200%;
+    }
+    70% {
+      margin-left: -200%;
+    }
+    75% {
+      margin-left: -300%;
+    }
+    100% {
+      margin-left: -300%;
+    }
+  }
+}
