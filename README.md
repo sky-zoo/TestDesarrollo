@@ -18,5 +18,5 @@ Una vez instalados, hay que:
 	1. `php artisan cache:clear`
 	2. `php artisan key:generate`
 	3. `php artisan migrate`
-	4. `php artisan db:seed`
+	4. `php artisan db:seed`<br>
 Una vez completado todo, ir a un navegador web y escribir localhost, deberían aparecer las carpetas que se encuentran en el directorio htdocs, hacer click en la carpeta TestDesarrollo, luego hacer click en public y listo.
