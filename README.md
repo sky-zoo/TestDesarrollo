@@ -1,11 +1,11 @@
-#Se deben tener estos programas antes de levantar el proyecto:
+# Se deben tener estos programas antes de levantar el proyecto:
 
 Se necesita tener instalado(deben realizarse en orden): 
 1. XAMPP con una versión de PHP mayor o igual a 7.3
 2. Git
 3. Composer
 
-#Como levantar el proyecto locamente:
+# Como levantar el proyecto locamente:
 Una vez instalados, hay que:
 1. Dirigirse hacia la carpeta donde se instaló XAMPP
 2. Ir a la carpeta htdocs y borrar el archivo index.php
