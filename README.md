@@ -20,3 +20,6 @@ Una vez instalados, hay que:
 	3. `php artisan migrate`
 	4. `php artisan db:seed`<br>
 Una vez completado todo, ir a un navegador web y escribir `localhost/`, deberían aparecer las carpetas que se encuentran en el directorio htdocs, hacer click en la carpeta TestDesarrollo, luego hacer click en public y listo.
+
+# Posible error(laravel.log):
+En caso de que se esté usando Linux como sistema operativo, puede aparecer un error que diga: "The stream or file laravel.log could not be opened". Para solucionarlo, hay que abrir la terminal de comandos e ir hacia el directorio de TestDesarrollo(el cual tiene que estar en htdocs), luego escribir el comando: `chmod -R 777 storage`.
