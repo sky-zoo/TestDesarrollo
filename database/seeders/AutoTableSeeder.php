@@ -33,6 +33,12 @@ class AutoTableSeeder extends Seeder
                     "prius-1", "camry", "toyota-86",
                     "innova", "sw-4", "rav-4",
                     "prado", "cruiser", "hilux"];
+        
+        $tipoAuto = ["auto","auto","auto",
+                     "auto", "auto","auto",
+                     "SUV", "SUV", "SUV",
+                     "SUV", "SUV", "pickup"];
+
 
         Auto::truncate();
 
@@ -41,7 +47,8 @@ class AutoTableSeeder extends Seeder
               'nombre_auto' => $nombreAutos[$i],
               'anio'=> $anioAutos[$i],
               'precio' => $precioAutos[$i],
-              'img_auto'=> $imgAuto[$i]
+              'img_auto'=> $imgAuto[$i],
+              'tipo'=> $tipoAuto[$i]
           ]);
         }
     }

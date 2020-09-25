@@ -117,5 +117,5 @@
     </footer>
     
   </body>
-  <script src=" {{ asset('js/main.js') }} "></script>
+  @yield('scripts-js')
 </html>

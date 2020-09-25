@@ -1,6 +1,5 @@
 @media screen and (max-width: 1400px){
     .menu{
-        // border: 1px red solid;
         grid-template-columns: 90px auto 90px;
         grid-template-rows: 60px;
 
@@ -13,58 +12,20 @@
     }
 
     .main{
+        grid-template-rows: 200px auto auto;
+        top: 60px;
+        margin: 0 91px;
         .catalogo{
             .filtrar-ordenar{
                 grid-template-columns: 100px auto 140px;
-                // border: 1px red solid;
-                .filtrar{
-                    // border: 1px red solid;
-                }
 
                 .categorias{
                     li{
                         padding: 5px 10px;
                     }
                 }
-
-                .ordenar{
-                    // border: 1px red solid;
-                }
             }
-        }
-    }
 
-    
-
-    .fondo-menu{
-        // top: 60px;
-        top: 0;
-        overflow-y: auto;
-
-        .menu-desplegable{
-            margin-top: 60px;
-            width: 100%;
-            // overflow-y: auto;
-            // .claro,.oscuro{
-            //     .menu-opciones{
-            //         // padding: 0;
-            //         .opciones{
-            //             // padding: 7px;
-            //             a{
-            //                 // font-size: 18px;
-            //             }
-            //         }
-            //     }
-            // }
-        }
-    }
-
-    .main{
-        grid-template-rows: 200px auto auto;
-        top: 60px;
-        margin: 0 91px;
-        // border: 1px red solid;
-        .catalogo{
             .autos{
                 grid-template-columns: auto auto;
                 grid-template-rows: auto auto;
@@ -73,6 +34,19 @@
         }
     }
 
+    
+
+    .fondo-menu{
+        top: 0;
+        overflow-y: auto;
+
+        .menu-desplegable{
+            margin-top: 60px;
+            width: 100%;
+        }
+    }
+
+
 }
 
 @media screen and (max-width: 1125px){
@@ -80,7 +54,6 @@
     .main{
         grid-template-rows: 150px auto auto;
         .titulo{
-            // border: 1px red solid;
             h1{
                 font-size: 40px;
             }
@@ -111,14 +84,12 @@
         .catalogo{
 
             .filtrar-ordenar{
-                // border: 1px red solid;
                 padding: 10px;
                 position: relative;
                 grid-template-columns: auto auto;
                 justify-content: space-between;
                 
                 .filtrar{
-                    // border: 1px red solid;
                     p{
                         display: flex;
                         img{
@@ -129,7 +100,6 @@
                 }
 
                 .ordenar{
-                    // display: flex;
                     .menu-ordenar{
                         top: 26px;
                         right: -10px;
@@ -137,7 +107,6 @@
                 }
 
                 .categorias{
-                    // border: 1px red solid;
                     position: absolute;
                     background-color: #fff;
                     z-index: 970;
@@ -146,7 +115,16 @@
                     top: 36px;
                     border-radius: 0 0 6px 6px;
                     box-shadow: 0 10px 20px 5px rgba(0,0,0,.2);
-    
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .2s;
+
+                    &.visible{
+                        opacity: 1;
+                        visibility: visible;
+                        transition: all .2s;
+                    }
+
                     li{
                         border-bottom: 1px #ccc solid;
                         margin: 0;
@@ -156,7 +134,6 @@
                             font-size: 17px;
                             padding: 10px 6px;
                             display: block;
-                            // border: 1px red solid;
                         }
                     }
 
@@ -165,7 +142,6 @@
                     }
 
                     .activo{
-                        // background-color: rgba(209, 214, 214, 0.2);
                         border-radius: 0;
                     }
     
@@ -179,43 +155,8 @@
     }
 }
 
-@media screen and (max-width: 768px){
-    // ESTA MEDIA QUERY ES PARA DISPOSITIVOS DE PANTALLA MEDIA
-    // .menu{
-    //     // grid-template-columns: 60px 60px;
-    //     // justify-content: space-between;
-    //     border: 1px red solid;
-
-    //     .logo-empresa{
-    //         border: 1px red solid;
-    //     }
-
-    //     .opciones{
-    //         display: none;
-    //     }
-
-    //     .boton-menu-desplegable{
-    //         border: 1px red solid;
-    //     }
-    // }
-
-    .main{
-        // margin: 0 10px;
-
-        .catalogo{
-
-            .autos{
-                // grid-template-columns: auto auto;
-                // grid-template-rows: auto auto;
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 580px){
     .main{
-        // margin: 0 10px;
-
         .catalogo{
 
             .autos{

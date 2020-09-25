@@ -27,4 +27,27 @@ class PageController extends Controller
         }
 
     }
+
+    public function resultados(Request $request){
+
+        if($request->has('precio')){
+            $orden = trim($request->get('precio'));
+            $autos = Auto::orderBy('precio', $orden)->get();
+
+            return view('resultados', compact('autos'));
+
+        }else if($request->has('anio')){
+            $orden = trim($request->get('anio'));
+            $autos = Auto::orderBy('anio', $orden)->get();
+
+            return view('resultados', compact('autos'));
+        }else if($request->has('tipo')){
+            $tipo = trim($request->get('tipo'));
+            $autos = Auto::where('tipo', $tipo)->get();
+
+            return view('resultados', compact('autos'));
+
+        }
+
+    }
 }

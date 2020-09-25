@@ -84,6 +84,9 @@
   position: relative;
   top: -8px;
 }
+.caja-presentacion .caracteristicas-auto .lista-caracteristicas .item {
+  height: 100%;
+}
 .caja-presentacion .caracteristicas-auto .lista-caracteristicas .item .item-caja {
   max-width: 270px;
 }

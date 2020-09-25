@@ -126,6 +126,9 @@ body {
 
 body {
   overflow: hidden scroll;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 50px;
 }
 
 .main {
@@ -209,6 +212,14 @@ body {
   right: 0;
   box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 6px 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+.main .catalogo .filtrar-ordenar .ordenar .menu-ordenar.visible {
+  opacity: 1;
+  transition: all 0.2s;
+  visibility: visible;
 }
 .main .catalogo .filtrar-ordenar .ordenar .menu-ordenar .opciones-ordenar {
   list-style: none;
@@ -289,12 +300,23 @@ footer {
     display: none;
   }
 
+  .main {
+    grid-template-rows: 200px auto auto;
+    top: 60px;
+    margin: 0 91px;
+  }
   .main .catalogo .filtrar-ordenar {
     grid-template-columns: 100px auto 140px;
   }
   .main .catalogo .filtrar-ordenar .categorias li {
     padding: 5px 10px;
   }
+  .main .catalogo .autos {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 60px;
+  }
+
   .fondo-menu {
     top: 0;
     overflow-y: auto;
@@ -302,17 +324,6 @@ footer {
   .fondo-menu .menu-desplegable {
     margin-top: 60px;
     width: 100%;
-  }
-
-  .main {
-    grid-template-rows: 200px auto auto;
-    top: 60px;
-    margin: 0 91px;
-  }
-  .main .catalogo .autos {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-row-gap: 60px;
   }
 }
 @media screen and (max-width: 1125px) {
@@ -364,6 +375,14 @@ footer {
     top: 36px;
     border-radius: 0 0 6px 6px;
     box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+  }
+  .main .catalogo .filtrar-ordenar .categorias.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.2s;
   }
   .main .catalogo .filtrar-ordenar .categorias li {
     border-bottom: 1px #ccc solid;

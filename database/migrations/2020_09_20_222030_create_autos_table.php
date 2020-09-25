@@ -19,6 +19,7 @@ class CreateAutosTable extends Migration
             $table->integer('anio');
             $table->integer('precio');
             $table->string('img_auto', 100);
+            $table->string('tipo', 50);
         });
     }
 

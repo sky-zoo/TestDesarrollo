@@ -22,7 +22,6 @@ $zIndexMenu: 1000;
         display: flex;
         align-items: center;
         height: 100%;
-        // border: 1px red solid;
         .opciones-modelos, .opciones-ficha{
             height: 100%;
             padding: 13px 25px;
@@ -71,9 +70,6 @@ $zIndexMenu: 1000;
 
 .menu-desplegable{
     border-left: 1px #efeeef solid;
-    // border-top: none;
-    // border-right: none;
-    // border-bottom: none;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -97,10 +93,8 @@ $zIndexMenu: 1000;
             list-style: none;
             border-bottom: 1px #efeeef solid;
             padding: 15px 20px;
-            // border: 1px red solid;
     
             .opciones{
-                // border: 1px red solid;
                 text-align: right;
                 padding: 10px;
                 
@@ -127,12 +121,10 @@ $zIndexMenu: 1000;
     position: fixed;
     z-index: 990;
     top: 70px;
-    // bottom: 0;
     right: -100%;
     background-color: rgba(0,0,0,.2);
     transition: all .5s;
     visibility: hidden;
-    // border: 1px red solid;
 }
 .mostrar{
     transition: all .5s;

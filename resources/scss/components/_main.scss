@@ -3,17 +3,14 @@ $color: #373737;
 .main{
     display: grid;
     grid-template-columns: auto;
-    // grid-template-rows: 222px auto auto; //ORIGINALMENTE ESTABA ESTO
     position: relative;
     top: 70px;
     margin: 0 120px;
-    // border: 1px red solid;
-    // min-width: 75%;
     .titulo{
         display: flex;
         align-items: center;
         h1{
-            padding: 70px 0; // SAQUE EL GRID TEMPLATE ROWS POR ESTO 
+            padding: 70px 0; 
             font-size: 50px;
             color: $color;
         }
@@ -23,7 +20,6 @@ $color: #373737;
         display: flex;
         flex-direction: column;
         position: relative;
-        // border: 1px red solid;
 
         .filtrar-ordenar{
             border-bottom: 1px #d8d8d8 solid;
@@ -70,7 +66,6 @@ $color: #373737;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // border: 1px red solid;
                 position: relative;
                 
                 button{
@@ -83,7 +78,6 @@ $color: #373737;
                 }
 
                 .menu-ordenar{
-                    // border: 1px red solid;
                     width: 210px;
                     background-color: #fff;
                     position: absolute;
@@ -92,17 +86,22 @@ $color: #373737;
                     right: 0;
                     box-shadow: 0 10px 20px 5px rgba(0,0,0,.2);
                     border-radius: 0 0 6px 6px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .2s;
+                    
+                    &.visible{
+                        opacity: 1;
+                        transition: all .2s;
+                        visibility: visible;
+                    }
 
                     .opciones-ordenar{
                         list-style: none;
-                        // border: 1px red solid;
                         .opcion{
-                            // border: 1px red solid;
-                            // text-align: center;
                             border-bottom: 1px #ccc solid;
                             a{
                                 font-size: 17px;
-                                // border: 1px red solid;
                                 width: 100%;
                                 padding: 10px 6px;
                                 color: #191919;
@@ -125,23 +124,16 @@ $color: #373737;
         }
 
         .autos{
-            // border: 1px red solid;
             display: grid;
             grid-template-columns: auto auto auto auto;
             grid-template-rows: auto;
             grid-gap: 60px 0;
-            // justify-content: space-evenly;
-            // position: relative;
             margin-bottom: 75px;
 
             .auto{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-
-                // position: relative;
-                // border: 1px red solid;
-                // width: 268px;
                 
                 .imagen{
                     width: 268px;
@@ -149,11 +141,6 @@ $color: #373737;
                 }
 
                 .link-modelo{
-                    // border: 1px red solid;
-                    // -webkit-user-select: none;
-                    // -khtml-user-select: none;
-                    // -moz-user-select: none;
-                    // -o-user-select: none;
                     user-select: none;
                     .descripcion{
                         h3{
@@ -172,27 +159,18 @@ $color: #373737;
             }
 
             .ver-modelo{
-                // display: none;
-                // border: 1px red solid;
                 width: 100%;
                 height: 36px;
-                // position: relative;
                 position: absolute;
                 z-index: 970;
                 right: 0;
                 visibility: hidden;
-                // transition: all .5s;
-                // bottom: -40px;
-                // top: 150px;
                 .visible{
                     display: flex;
-                    // visibility: visible;
-                    // transition: all .5s;
                 }
     
                 img{
                     position: absolute;
-                    // border: 1px red solid;
                 }
     
             }
@@ -202,7 +180,6 @@ $color: #373737;
 
 footer{
     background-color: #000000;
-    // border: 1px red solid;
     margin-top: 60px;
     min-height: 50px;
     width: 100vw;

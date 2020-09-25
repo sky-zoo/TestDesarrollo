@@ -1,58 +1,43 @@
 .caja-presentacion{
-    // border: 1px red solid;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
     position: relative;
     top: 70px;
-    // border: 1px red solid;
     width: 100vw;
     color: #373737;
 
     .presentacion{
-        // border: 1px red solid;
         position: relative;
         padding: 50px 0;
         margin: 0 150px;
-        // margin-top: 40px;
-        // top: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
 
         .imagen{
-            // border: 1px red solid;
-            // max-width: 90%;
             justify-content: center;
             align-self: center;
             width: 100%;
             display: flex;
-            // min-width: 10%;
             img{
                 max-width: 100%;
             }
         }
 
         .detalles{
-            // border: 1px red solid;
             align-self: stretch;
-            // padding: 100px;
             padding: 10px;
             width: 100%;
-            // margin-left: 50px;
 
             .nombre-auto{
-                // border: 1px red solid;
                 font-weight: 600;
             }
 
             .descripcion-auto{
-                // border: 1px red solid;
-                // width: 100%;
                 .titulo{
                     font-size: 50px;
                     font-weight: 600;
-                    // padding: 10px;
                 }
 
                 .descripcion{
@@ -60,7 +45,6 @@
                     font-size: 20px;
                     line-height: 1.69;
                     letter-spacing: -0.1px;
-                    // color: #373737;
                 }
             }
 
@@ -71,20 +55,16 @@
         background-color: #f7f7f7;
         padding: 40px 0px;
         margin-bottom: 60px;
-        // border: 1px red solid;
 
         .lista-caracteristicas{
             list-style: none;
             position: relative;
-            // border: 1px red solid;
-            // display: flex;
             display: grid;
             grid-template-columns: auto auto auto auto auto auto;
             grid-template-rows: auto;
             justify-content: space-between;
 
             .pasar-izquierda,.pasar-derecha{
-                // border: 1px red solid;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.56);
                 z-index: 980;
@@ -110,7 +90,6 @@
 
             .item:first-child, .item:last-child{
                 width: 128px;
-                // border: 1px red solid;
                 img{
                     position: relative;
                     top: -8px;
@@ -118,10 +97,7 @@
             }
 
             .item{
-                // display: flex;
-                // flex-direction: column;
-                // border: 1px red solid;
-                // width: 270px;
+                height: 100%;
 
                 .item-caja{
                     max-width: 270px;
@@ -142,7 +118,6 @@
 
                     img{
                         width: 100%;
-                        // border: 1px red solid;
                     }
 
                 }
@@ -153,7 +128,6 @@
     }
     
     .especialidades-auto{
-        // border: 1px red solid;
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
@@ -161,16 +135,12 @@
         position: relative;
 
         .texto{
-            // border: 1px red solid;
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 100%;
-            // margin: 0 200px;
-            // padding: 100px;
             
             div{
-                // border: 1px red solid;
                 padding: 15px;
                 margin: 0 190px;
                 h2{
@@ -180,7 +150,6 @@
                 }
     
                 p{
-                    // border: 1px red solid;
                     letter-spacing: -0.1px;
                     line-height: 1.69;
                     font-size: 19px;
@@ -190,13 +159,11 @@
         }
         
         .imagen{
-            // border: 1px red solid;
             display: flex;
             justify-content: center;
             margin: 20px 0;
             width: 100%;
             img{
-                // width: 100%;
                 padding: 20px;
             }
 

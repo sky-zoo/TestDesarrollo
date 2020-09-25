@@ -16,3 +16,5 @@ use App\Http\Controllers\PageController;
 Route::get('/', [PageController::class, 'inicio'])->name('home');
 
 Route::get('ficha_modelo/{idAuto?}', [PageController::class, 'fichaModelo'])->name('fichaModelo')->where('idAuto', '[0-9]+');
+
+Route::get('resultados', [PageController::class, 'resultados'])->name('resultados');
